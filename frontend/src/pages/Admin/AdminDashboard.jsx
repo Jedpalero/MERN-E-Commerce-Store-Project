@@ -9,6 +9,9 @@ import { useEffect, useState } from "react";
 import AdminMenu from "./AdminMenu";
 import OrderList from "./OrderList";
 import Loader from "../../components/Loader";
+import { FaCircleDollarToSlot } from "react-icons/fa6";
+import { CgProfile } from "react-icons/cg";
+import { CiShoppingCart } from "react-icons/ci";
 
 const AdminDashboard = () => {
   const { data: sales, isLoading } = useGetTotalSalesQuery();
@@ -95,7 +98,7 @@ const AdminDashboard = () => {
         <div className="w-[80%] flex justify-around flex-wrap">
           <div className="rounded-lg bg-black p-5 w-[20rem] mt-5">
             <div className="font-bold rounded-full w-[3rem] bg-pink-500 text-center p-3">
-              $
+              <FaCircleDollarToSlot className="ml-1.4 w-5" />
             </div>
 
             <p className="mt-5">Sales</p>
@@ -105,7 +108,7 @@ const AdminDashboard = () => {
           </div>
           <div className="rounded-lg bg-black p-5 w-[20rem] mt-5">
             <div className="font-bold rounded-full w-[3rem] bg-pink-500 text-center p-3">
-              $
+              <CgProfile className="w-5" />
             </div>
 
             <p className="mt-5">Customers</p>
@@ -115,7 +118,7 @@ const AdminDashboard = () => {
           </div>
           <div className="rounded-lg bg-black p-5 w-[20rem] mt-5">
             <div className="font-bold rounded-full w-[3rem] bg-pink-500 text-center p-3">
-              $
+              <CiShoppingCart className="w-5" />
             </div>
 
             <p className="mt-5">All Orders</p>
